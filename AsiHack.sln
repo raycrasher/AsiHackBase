@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsiHack", "AsiHack\AsiHack.csproj", "{A9D33DC3-C707-42F5-9A70-3FE671063C97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsiHack.Base", "AsiHack.Base\AsiHack.Base.csproj", "{ED638DD5-E755-4B7A-940D-5C94AB425686}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A9D33DC3-C707-42F5-9A70-3FE671063C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9D33DC3-C707-42F5-9A70-3FE671063C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9D33DC3-C707-42F5-9A70-3FE671063C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9D33DC3-C707-42F5-9A70-3FE671063C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED638DD5-E755-4B7A-940D-5C94AB425686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED638DD5-E755-4B7A-940D-5C94AB425686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED638DD5-E755-4B7A-940D-5C94AB425686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED638DD5-E755-4B7A-940D-5C94AB425686}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
