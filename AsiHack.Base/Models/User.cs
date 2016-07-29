@@ -13,6 +13,7 @@ namespace AsiHack.Base.Models
         IEnumerable<string> IUserIdentity.Claims => Claims;
 
         public string UserName { get; set; }
+        public byte[] HashedPassword { get; set; }
     }
 
 

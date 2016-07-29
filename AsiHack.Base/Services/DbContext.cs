@@ -13,6 +13,7 @@ namespace AsiHack.Base.Services
         public DbContext()
         {
             Database = new Database(Properties.Settings.Default.ConnectionString);
+
         }
     }
 }
