@@ -6,7 +6,7 @@ namespace AsiHack.Base.Modules
     {
         public IndexModule()
         {
-            Get["/"] = parameters =>
+            Get["/"] = _ =>
             {
                 return View["../index"];
             };
