@@ -1,4 +1,7 @@
-﻿using Nancy;
+﻿using AsiHack.Base.Models;
+using Nancy;
+using Nancy.Authentication.Forms;
+using Nancy.ModelBinding;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,26 +12,31 @@ namespace AsiHack.Base.Modules
     public class LoginModule: NancyModule
     {
         public LoginModule()
-        {
-            Get["/login"] = parameters => {
+        {            
+            Get["/restricted"] = parameters => {
+                
                 // Called when the user visits the login page or is redirected here because
                 // an attempt was made to access a restricted resource. It should return
                 // the view that contains the login form
-                return 1;
+                return Response.AsJson(new Status(0,"Login Failed"), HttpStatusCode.Forbidden);
             };
 
-            Get["/logout"] = parameters => {
-                // Called when the user clicks the sign out button in the application. Should
-                // perform one of the Logout actions (see below)
-                return 1;
+            Get["/logout"] = _ => {
+                return this.LogoutAndRedirect("/");
             };
 
-            Post["/login"] = parameters => {
-                // Called when the user submits the contents of the login form. Should
-                // validate the user based on the posted form data, and perform one of the
-                // Login actions (see below)
-                return 1;
+            Post["/register"] = _ => "Not supported yet!";
+
+            Post["/login"] = _ => {
+                var login = this.Bind<UserLogin>();
+
+                if (login.Username == "test" && login.Password == "pass") {
+                    return this.LoginAndRedirect(Guid.NewGuid());
+                }
+                else
+                    return Response.AsJson(new Status(0,"Login failed"), HttpStatusCode.Forbidden);
             };
         }
+
     }
 }

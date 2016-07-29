@@ -17,7 +17,7 @@
             var formsAuthConfiguration =
                 new FormsAuthenticationConfiguration()
                 {
-                    RedirectUrl = "~/login",
+                    RedirectUrl = "~/restricted",
                     UserMapper = container.Resolve<IUserMapper>(),
                 };
             FormsAuthentication.Enable(pipelines, formsAuthConfiguration);
