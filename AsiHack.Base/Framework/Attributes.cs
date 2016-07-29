@@ -5,10 +5,13 @@ using System.Web;
 
 namespace AsiHack.Base
 {
-    public class ModelAttribute: Attribute { }
+    [AttributeUsage(AttributeTargets.Class)]
+    public sealed class ModelAttribute: Attribute { }
 
-    public class ApiModuleAttribute : Attribute { }
+    [AttributeUsage(AttributeTargets.Class)]
+    public sealed class ApiModuleAttribute : Attribute { }
 
-    public class ApiFunctionAttribute : Attribute { }
+    [AttributeUsage(AttributeTargets.Method)]
+    public sealed class ApiFunctionAttribute : Attribute { }
 
 }
