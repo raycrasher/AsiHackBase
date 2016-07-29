@@ -17,7 +17,7 @@
             var formsAuthConfiguration =
                 new FormsAuthenticationConfiguration()
                 {
-                    RedirectUrl = "~/restricted",
+                    RedirectUrl = "/",
                     UserMapper = container.Resolve<IUserMapper>(),
                 };
             FormsAuthentication.Enable(pipelines, formsAuthConfiguration);
@@ -28,6 +28,14 @@
             base.ConfigureConventions(conventions);
             conventions.StaticContentsConventions.Add(
                 StaticContentConventionBuilder.AddDirectory("assets", "/Assets")
+            );
+
+            conventions.StaticContentsConventions.Add(
+                StaticContentConventionBuilder.AddFile("/index.html", "/Views/index.html")
+            );
+
+            conventions.StaticContentsConventions.Add(
+                StaticContentConventionBuilder.AddDirectory("script", "/Script")
             );
 
 
