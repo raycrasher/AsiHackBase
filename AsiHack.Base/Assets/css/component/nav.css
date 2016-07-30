@@ -1,12 +1,12 @@
 .navbar-brand .logo{
-	margin-top:-15px;
-	height: 50px;
-	width: 50px;
+	 margin-top: -9px;
+    height: 40px;
+    margin-left: 19px;
 }
 
 .navbar{
 	border-radius: 0px;
-	border-bottom: 3px solid teal;
+	border-bottom: 3px solid #119eda ;
 	margin:0;
 	background-color:#1b1b1b;
 	height:55px !important;
@@ -33,4 +33,7 @@
 }
 .navbar-right li > a:hover{
 	color:teal !important;
+}
+.navbar-brand{
+	color:#119eda  !important;
 }
