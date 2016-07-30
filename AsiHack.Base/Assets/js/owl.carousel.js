@@ -47,7 +47,13 @@ if (typeof Object.create !== "function") {
                     }
                     base.$elem.html(content);
                 }
-                base.logIn();
+                base.
+
+
+
+
+
+();
             }
 
             if (typeof base.options.beforeInit === "function") {

@@ -167,9 +167,12 @@
     <Content Include="Assets\js\plugins\jquery\jquery-3.1.0.min.js" />
     <Content Include="Assets\js\plugins\jquery\scroll.js" />
     <Content Include="Assets\nancy-logo.png" />
-    <Content Include="Script\Login.js" />
-    <Content Include="Views\sideNav.html" />
-    <Content Include="Views\topNav.html" />
+    <Content Include="Views\Homepage.html">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\login.html" />
+    <Content Include="Views\SideNav.html" />
+    <Content Include="Views\TopNav.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -180,6 +183,7 @@
     <Compile Include="Framework\SimpleIoC.cs" />
     <Compile Include="Framework\Status.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Modules\Homepage.cs" />
     <Compile Include="Modules\IndexModule.cs" />
     <Compile Include="Modules\LoginModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

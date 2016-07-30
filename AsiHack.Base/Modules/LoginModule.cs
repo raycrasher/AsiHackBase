@@ -31,11 +31,10 @@ namespace AsiHack.Base.Modules
                 var login = this.Bind<UserLogin>();
 
                 if (login.Username == "test" && login.Password == "pass") {
-                    this.LoginWithoutRedirect(Guid.NewGuid()).WithContentType("application/json");
-                    return Response.AsJson(new Status(0, "Login success")).WithStatusCode(HttpStatusCode.OK);
+                    return Response.AsJson(new Status(1, "Login success", "test")).WithStatusCode(HttpStatusCode.OK);
                 }
                 else
-                    return Response.AsJson(new Status(1,"Login failed")).WithStatusCode(HttpStatusCode.OK);
+                    return Response.AsJson(new Status(0,"Login failed", "testFailed")).WithStatusCode(HttpStatusCode.OK);
             };
         }
 
