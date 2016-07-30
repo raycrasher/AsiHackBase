@@ -11,6 +11,7 @@
         WindowStartupLocation="Manual"
         Title="NihonggoFlash" Height="350" Width="383"
         Loaded="OnLoad"
+        ResizeMode="NoResize"                
         >
     <Window.Resources>
         <ResourceDictionary>
@@ -21,7 +22,7 @@
             <vm:MainViewModel x:Key="Model"/>
         </ResourceDictionary>
     </Window.Resources>
-    <Grid DataContext="{StaticResource Model}" Background="LightBlue">
+    <Grid DataContext="{StaticResource Model}" Background="{StaticResource WindowTitleColorBrush}">
         <StackPanel>
             <Label>Word</Label>
             <Border Background="White" Margin="4" CornerRadius="5">

@@ -8,5 +8,8 @@
     <Setting Name="LastFlashCardIndex" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="FlashCardUpdateUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://localhost:12008/GetData</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

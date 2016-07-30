@@ -113,6 +113,7 @@
     <Compile Include="Framework\SimpleIoC.cs" />
     <Compile Include="Framework\Startup.cs" />
     <Compile Include="Services\Repository.cs" />
+    <Compile Include="Services\RetrieveDataFromOnline.cs" />
     <Compile Include="Services\RunOnWindowsStartup.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
