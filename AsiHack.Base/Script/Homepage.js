@@ -5,35 +5,20 @@ $(document).ready(function(){
 	datatype: "local",
    	colNames:['ID','WORD', 'How to Read', 'Meaning','Sample'],
    	colModel:[
-   		{name:'id',index:'id', width:60, sorttype:"int"},
+   		{name:'id',index:'id', width:60, sorttype:"int", hidden:true},
    		{name:'word',index:'word', width:90, sorttype:"string",editable:true},
    		{name:'howtoread',index:'name', sorttype:"string", width:100,editable:true},
    		{name:'meaning',index:'howtoread', width:80, align:"right",sorttype:"string",editable:true},
    		{name:'sample',index:'sample', width:80, align:"right",sorttype:"string",editable:true},			
    	],
-	onSelectRow: function(id){
-		
-			 if ($("#lastCellId").val() != -1)
-                        jQuery('#tblData').saveRow($("#lastCellId").val(), false, 'clientArray');
-			jQuery('#tblData').jqGrid('restoreRow',lastsel2);
+	onSelectRow: function(id){			  
+		 if (id != lastsel2){ 
+			jQuery("#tblData").saveRow(lastsel2, false, 'clientArray');
+            jQuery("#tblData").jqGrid('saveRow',lastsel2);
 			jQuery('#tblData').jqGrid('editRow',id,true);
 			lastsel2=id;
-			$("input, text", e.target).focus();
-            $("#lastCellId").val(rowid);
-		
+		}			
 	},
-	onCellSelect: function(rowid, iCol, cellcontent, e) {
-
-                if (rowid <= lastsel2) {
-                    if ($("#lastCellId").val() != -1)
-                        $("#tblData").saveRow($("#lastCellId").val(), false, 'clientArray');
-                    $('#tblData').editRow(rowid, iCol, true);
-                    $("input, text", e.target).focus();
-                    $("#lastCellId").val(rowid);
-                }
-    },
-	restoreAfterSelect: false,
-	saveAfterSelect: true,	
 	loadComplete: function(data) {
 				var mydata = [
 				{id:"1",word:"確り",howtoread:"しっかり",meaning:"tightly, firmly, steadily",sample:"test"},
@@ -59,25 +44,48 @@ $(document).ready(function(){
    	caption: ""
 	});
 	
-	$("#btnAdd").click(function(){
-    var gridData = jQuery("#tblData").getRowData();
-    var postData = JSON.stringify(gridData);
-    alert("JSON serialized jqGrid data:\n" + postData);
-    $.ajax({
-        type: "POST",
-        url: "/AddData",
-        data : {
-            jgGridData: postData
-        },
-        dataType:"json",
-        contentType: "application/json; charset=utf-8",
-        success: function(response, textStatus, xhr) {
-            alert("success");
-        },
-        error: function(xhr, textStatus, errorThrown) {
-            alert("error");
-        }
-    });
-});
+	jQuery("#btnAdd").click(function(){
+		jQuery("#tblData").saveRow(lastsel2, false, 'clientArray');
+		var rowId = jQuery("#tblData").jqGrid('getGridParam','selarrrow'); 
+		if(rowId.length > 0){
+			var postData=[];
+			for(var i=0; i<rowId.length;i++){
+			    var tempWord = jQuery("#tblData").jqGrid ('getCell', rowId[i], 'word');
+				alert(tempWord);
+				if(tempWord != ""){
+					postData.push({
+						word: tempWord,
+						howtoread: jQuery("#tblData").jqGrid ('getCell', rowId[i], 'howtoread'),
+						meaning: jQuery("#tblData").jqGrid ('getCell', rowId[i], 'meaning'),
+						sample:jQuery("#tblData").jqGrid ('getCell', rowId[i], 'sample')			
+					});
+				}
+			}
+			var jsonPostData = JSON.stringify(postData);
+			if(postData.length != 0){
+				$.ajax({
+					type: "POST",
+					url: "/SetData",
+					data : {
+						jgGridData: jsonPostData
+					},
+					dataType:"jsonp",
+					contentType: "application/jsonp; charset=utf-8",
+					success: function(response, textStatus, xhr) {
+						alert("success");
+					},
+					error: function(xhr, textStatus, errorThrown) {
+						alert("error");
+					}
+				});
+			}
+			else{
+				alert("Please select row with WORD data!");
+			}
+		}
+		else{
+			alert("No selected data!");
+		}
+	});
 	
 });
