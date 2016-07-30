@@ -1,0 +1,36 @@
+.navbar-brand .logo{
+	margin-top:-15px;
+	height: 50px;
+	width: 50px;
+}
+
+.navbar{
+	border-radius: 0px;
+	border-bottom: 3px solid teal;
+	margin:0;
+	background-color:#1b1b1b;
+	height:55px !important;
+}
+
+
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover{
+	background-color: transparent;
+	border-bottom:3px solid #8c988f;
+	color: #c7c7c7 !important;
+}
+
+.navbar-default{
+	background-image:url("../../img/background/1.jpg");
+	background-size:cover;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+	background-color: transparent !important;
+}
+.navbar-right li > a{
+	transition:0.5s;
+}
+.navbar-right li > a:hover{
+	color:teal !important;
+}
