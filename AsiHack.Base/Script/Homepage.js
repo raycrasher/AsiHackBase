@@ -21,12 +21,16 @@ $(document).ready(function () {
         },
         loadComplete: function (data) {
             var mydata = [
-            { id: "1", word: "確り", howtoread: "しっかり", meaning: "tightly, firmly, steadily", sample: "test" },
-            { id: "2", word: "確り", howtoread: "しっかり", meaning: "tightly, firmly, steadily", sample: "test" },
-            { id: "3", word: "確り", howtoread: "しっかり", meaning: "tightly, firmly, steadily", sample: "test" },
-            { id: "4", word: "確り", howtoread: "しっかり", meaning: "tightly, firmly, steadily", sample: "test" },
-            { id: "5", word: "確り", howtoread: "しっかり", meaning: "tightly, firmly, steadily", sample: "test" },
-            { id: "6", word: "確り", howtoread: "しっかり", meaning: "tightly, firmly, steadily", sample: "test" },
+            { id: "1", word: "着信履歴", howtoread: "ちゃくしんりれき", meaning: "record of calls received", sample: "-" },
+            { id: "2", word: "送信箱", howtoread: "そうしんばこ", meaning: "outbox", sample: "-" },
+            { id: "3", word: "可能(な)", howtoread: "かのう", meaning: "possible", sample: "-" },
+            { id: "4", word: "がぞう", howtoread: "がぞう", meaning: "picture, image", sample: "-" },
+            { id: "5", word: "年老いた", howtoread: "としおいた", meaning: "old (person)", sample: "-" },
+            { id: "6", word: "捨てる", howtoread: "すてる", meaning: "throw", sample: "-" },
+            { id: "7", word: "昼間が暖かい", howtoread: "ひるまがあたたかい", meaning: "It's warm in the daytime", sample: "-" },
+            { id: "8", word: "まよなか", howtoread: "すてる", meaning: "end of month", sample: "-" },
+            { id: "9", word: "年中無休", howtoread: "ねんじゅうむきゅう", meaning: "open everyday throughout the year", sample: "-" },
+            { id: "10", word: "親類", howtoread: "しんるい", meaning: "relatives", sample: "-" },
             ];
             for (var i = 0; i <= mydata.length; i++) {
                 dataCounter++;
@@ -42,7 +46,7 @@ $(document).ready(function () {
         height: 500,
         multiselect: true,
         caption: ""
-    });
+    }).jqGrid('setGridWidth', '900');;
 
     jQuery("#btnAdd").click(function () {
         jQuery("#tblData").saveRow(lastsel2, false, 'clientArray');
@@ -51,7 +55,6 @@ $(document).ready(function () {
             var postData = [];
             for (var i = 0; i < rowId.length; i++) {
                 var tempWord = jQuery("#tblData").jqGrid('getCell', rowId[i], 'word');
-                alert(tempWord);
                 if (tempWord != "") {
                     postData.push({
                         word: tempWord,

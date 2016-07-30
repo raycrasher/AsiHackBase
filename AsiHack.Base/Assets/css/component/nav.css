@@ -6,7 +6,7 @@
 
 .navbar{
 	border-radius: 0px;
-	border-bottom: 3px solid teal;
+	border-bottom: 3px solid #119eda ;
 	margin:0;
 	background-color:#1b1b1b;
 	height:55px !important;
@@ -35,5 +35,5 @@
 	color:teal !important;
 }
 .navbar-brand{
-	color:teal !important;
+	color:#119eda  !important;
 }
