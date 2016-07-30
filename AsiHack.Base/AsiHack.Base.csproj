@@ -190,6 +190,7 @@
     </Compile>
     <Compile Include="Services\Authentication.cs" />
     <Compile Include="Services\DbContext.cs" />
+    <Compile Include="Services\Repository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\index.html">
