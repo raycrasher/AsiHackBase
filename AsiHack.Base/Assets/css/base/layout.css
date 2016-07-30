@@ -1,6 +1,7 @@
 body{
 	background-color: #f6f6f6;
 	height: 1000px;
+	padding-top:55px;
 }
 .dropdown-user{
 	position: relative;
@@ -114,5 +115,8 @@ body{
 }
 
 .data-table{
-	width:900px !important;
+}
+
+.add{
+	padding-right:10px;
 }

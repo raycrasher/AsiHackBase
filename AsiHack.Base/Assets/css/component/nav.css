@@ -34,3 +34,6 @@
 .navbar-right li > a:hover{
 	color:teal !important;
 }
+.navbar-brand{
+	color:teal !important;
+}
