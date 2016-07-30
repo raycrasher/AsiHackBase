@@ -38,7 +38,7 @@ namespace AsiHack.Base.Services
         {
             var cards = context.Cards;
 
-            using (var reader = System.IO.File.OpenText("|DataDirectory|cards.csv"))
+            using (var reader = System.IO.File.OpenText(AppDomain.CurrentDomain.BaseDirectory.ToString() +  "/cards.csv"))
             {
                 var csv = new CsvHelper.CsvReader(reader);
 

@@ -51,7 +51,7 @@ namespace AsiHack.Base.Modules
                 return Response.AsJson(new Status(1,"OK",$"Added {data.Count} items"));
             };
 
-            Get["/GetData"] = _ => Response.AsJson(repo.Cards.ToArray());
+            Get["/GetData"] = _ => Response.AsText(Newtonsoft.Json.JsonConvert.SerializeObject(repo.Cards.ToArray())).WithContentType("application/json");
 
             Get["/GetData/{from}/{to}"] = parameters =>
             {
