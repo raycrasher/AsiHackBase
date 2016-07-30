@@ -45,5 +45,17 @@ namespace Alliance.NihonggoFlash.Properties {
                 this["LastFlashCardIndex"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:12008/GetData")]
+        public string FlashCardUpdateUrl {
+            get {
+                return ((string)(this["FlashCardUpdateUrl"]));
+            }
+            set {
+                this["FlashCardUpdateUrl"] = value;
+            }
+        }
     }
 }

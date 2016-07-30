@@ -36,6 +36,32 @@ namespace AsiHack.Base.Services
 
         protected override void Seed(Repository context)
         {
+            var cards = context.Cards;
+
+            using (var reader = System.IO.File.OpenText("|DataDirectory|cards.csv"))
+            {
+                var csv = new CsvHelper.CsvReader(reader);
+
+                while (csv.Read())
+                {
+                    string word, howToRead, meaning, sample;
+
+                    csv.TryGetField(0, out word);
+                    csv.TryGetField(1, out howToRead);
+                    csv.TryGetField(2, out meaning);
+                    csv.TryGetField(3, out sample);
+                    var card = new FlashCard
+                    {
+                        Word = word,
+                        HowToRead = howToRead,
+                        Meaning = meaning,
+                        Sample = sample
+                    };
+                    cards.Add(card);
+                }
+            }
+
+
             // add data here
             /*
             var cards = context.Cards;
