@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var dataCounter=0;
 	jQuery("#tblData").jqGrid({
 	datatype: "local",
-   	colNames:['ID','WORD', 'How to Read', 'Meaning','Sample'],
+   	colNames:['gD','WORD', 'How to Read', 'Meaning','Sample'],
    	colModel:[
    		{name:'id',index:'id', width:60, sorttype:"int"},
    		{name:'word',index:'word', width:90, sorttype:"string",editable:true},

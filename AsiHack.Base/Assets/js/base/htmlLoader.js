@@ -23,5 +23,5 @@ function loadHtml(elID, url){
 
 }
 
-loadHtml("sideNav", "TopNav");
-loadHtml("topNav", "SideNav");
+loadHtml("topNav", "TopNav");
+loadHtml("sideNav", "SideNav");

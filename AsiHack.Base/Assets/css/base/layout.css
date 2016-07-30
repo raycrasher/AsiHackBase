@@ -91,7 +91,28 @@ body{
 	height: auto;
 }
 
-#lblError{
-	color: #889090;
-    text-align: center;
+.add-container{
+	padding:50px;
+}
+
+.side-menu-btn{
+	display: inline-block;
+    position: absolute;
+    left: -23px;
+    padding-right: 0px;
+    top: 0;
+    margin: 0;
+    border-radius: 0;
+    border:none;
+    height: 50px;
+}
+
+#sidebar-wrapper{
+	background-color: none;
+	background-color:#131212;
+	background-size:cover;
+}
+
+.data-table{
+	width:900px !important;
 }
