@@ -16,7 +16,7 @@ namespace Alliance.NihonggoFlash.Services
 
         public void Enable()
         {
-            rkApp.SetValue(RegKeyName, System.Reflection.Assembly.GetExecutingAssembly().Location);
+            rkApp.SetValue(RegKeyName, $"START \"{System.Reflection.Assembly.GetExecutingAssembly().Location}\" /D {System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)}");
         }
         public void Disable()
         {
