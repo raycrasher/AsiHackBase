@@ -9,6 +9,7 @@ namespace AsiHack.Base.Models
     [Model]
     public class User: IUserIdentity
     {
+        public Guid Id { get; set; }
         public List<string> Claims { get; set; } = new List<string>();
         IEnumerable<string> IUserIdentity.Claims => Claims;
 

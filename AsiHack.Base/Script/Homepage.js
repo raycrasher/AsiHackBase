@@ -69,7 +69,7 @@ $(document).ready(function(){
         data : {
             jgGridData: postData
         },
-        dataType:"json",
+        dataType:"jsonp",
         contentType: "application/json; charset=utf-8",
         success: function(response, textStatus, xhr) {
             alert("success");
