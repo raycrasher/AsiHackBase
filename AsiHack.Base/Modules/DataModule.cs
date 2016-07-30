@@ -38,7 +38,7 @@ namespace AsiHack.Base.Modules
                 List<FlashCardPostData> data;
                 using (var stream = new System.IO.StreamReader(Request.Body))
                 {
-                    var theString = stream.ReadToEnd();
+                    var theString = System.Text.RegularExpressions.Regex.Unescape(stream.ReadToEnd());
                     data = Newtonsoft.Json.JsonConvert.DeserializeObject<List<FlashCardPostData>>(theString);
                 }
                 if (data == null) return Response.AsJson(new Status(0, "Unable to parse input JSON"));
