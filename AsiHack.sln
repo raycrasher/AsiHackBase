@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsiHack.Base", "AsiHack.Base\AsiHack.Base.csproj", "{ED638DD5-E755-4B7A-940D-5C94AB425686}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alliance.NihonggoFlash", "Alliance.NihonggoFlash\Alliance.NihonggoFlash.csproj", "{5B67D8EA-495A-458E-9C08-9DD888752352}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alliance.NihonggoFlash.Core", "Alliance.NihonggoFlash.Core\Alliance.NihonggoFlash.Core.csproj", "{8977F4D7-E5F3-4FB0-B386-7341E2796D4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{ED638DD5-E755-4B7A-940D-5C94AB425686}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED638DD5-E755-4B7A-940D-5C94AB425686}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED638DD5-E755-4B7A-940D-5C94AB425686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B67D8EA-495A-458E-9C08-9DD888752352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B67D8EA-495A-458E-9C08-9DD888752352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B67D8EA-495A-458E-9C08-9DD888752352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B67D8EA-495A-458E-9C08-9DD888752352}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8977F4D7-E5F3-4FB0-B386-7341E2796D4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8977F4D7-E5F3-4FB0-B386-7341E2796D4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8977F4D7-E5F3-4FB0-B386-7341E2796D4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8977F4D7-E5F3-4FB0-B386-7341E2796D4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
