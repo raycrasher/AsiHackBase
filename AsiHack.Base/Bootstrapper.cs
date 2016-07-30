@@ -5,6 +5,7 @@
     using Nancy.Conventions;
     using Nancy.TinyIoc;
     using Nancy.Authentication.Forms;
+    using Services;
 
     public class Bootstrapper : DefaultNancyBootstrapper
     {
@@ -21,6 +22,7 @@
                     UserMapper = container.Resolve<IUserMapper>(),
                 };
             FormsAuthentication.Enable(pipelines, formsAuthConfiguration);
+            SimpleIoc.Default.Register<Repository>();
         }
 
         protected override void ConfigureConventions(NancyConventions conventions)
