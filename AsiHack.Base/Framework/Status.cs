@@ -10,13 +10,13 @@ namespace AsiHack.Base
     public class Status
     {
         public Status() { }
-        public Status(HttpStatusCode code, string message="", string details = "")
+        public Status(int code, string message="", string details = "")
         {
             StatusCode = code;
             Message = message;
             Details = details;
         }
-        public HttpStatusCode StatusCode { get; set; } = HttpStatusCode.OK;
+        public int StatusCode { get; set; } = 0;
         public string Message { get; set; } = "";
         public string Details { get; set; } = "";
     }

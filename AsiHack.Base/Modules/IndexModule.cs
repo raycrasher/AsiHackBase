@@ -8,7 +8,7 @@ namespace AsiHack.Base.Modules
         {
             Get["/"] = _ =>
             {
-                return View["../index"];
+                return View["index"];
             };
         }
     }

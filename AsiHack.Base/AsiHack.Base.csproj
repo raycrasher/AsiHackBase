@@ -167,7 +167,7 @@
     <Content Include="Assets\js\plugins\jquery\jquery-3.1.0.min.js" />
     <Content Include="Assets\js\plugins\jquery\scroll.js" />
     <Content Include="Assets\nancy-logo.png" />
-    <Content Include="Views\login.html" />
+    <Content Include="Script\Login.js" />
     <Content Include="Views\sideNav.html" />
     <Content Include="Views\topNav.html" />
     <Content Include="Web.config">
