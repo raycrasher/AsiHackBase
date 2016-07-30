@@ -46,22 +46,25 @@ namespace Alliance.NihonggoFlash.Services
             {
                 var csv = new CsvHelper.CsvReader(reader);
 
-                while (csv.Read())
+                if (!SimpleIoc.Default.GetInstance<RetrieveDataFromOnline>().RetrieveData())
                 {
-                    string word, howToRead, meaning, sample;
-
-                    csv.TryGetField(0, out word);
-                    csv.TryGetField(1, out howToRead);
-                    csv.TryGetField(2, out meaning);
-                    csv.TryGetField(3, out sample);
-                    var card = new FlashCard
+                    while (csv.Read())
                     {
-                        Word = word,
-                        HowToRead = howToRead,
-                        Meaning = meaning,
-                        Sample = sample
-                    };
-                    cards.Add(card);
+                        string word, howToRead, meaning, sample;
+
+                        csv.TryGetField(0, out word);
+                        csv.TryGetField(1, out howToRead);
+                        csv.TryGetField(2, out meaning);
+                        csv.TryGetField(3, out sample);
+                        var card = new FlashCard
+                        {
+                            Word = word,
+                            HowToRead = howToRead,
+                            Meaning = meaning,
+                            Sample = sample
+                        };
+                        cards.Add(card);
+                    }
                 }
             }
             cards.Add(new FlashCard

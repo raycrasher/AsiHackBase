@@ -32,6 +32,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -106,66 +107,10 @@
     <Content Include="Assets\css\base\layout.css" />
     <Content Include="Assets\css\base\normalize.css" />
     <Content Include="Assets\css\base\typography.css" />
-    <Content Include="Assets\css\components\button.css" />
-    <Content Include="Assets\css\components\metroBox.css" />
-    <Content Include="Assets\css\components\nav.css" />
-    <Content Include="Assets\css\font-awesome.min.css" />
-    <Content Include="Assets\css\plugins\bootstrap\bootstrap.min.css" />
-    <Content Include="Assets\css\plugins\bootstrap\simple-sidebar.css" />
-    <Content Include="Assets\css\plugins\calendar\fullcalendar.css" />
-    <Content Include="Assets\css\plugins\calendar\fullcalendar.print.css" />
-    <Content Include="Assets\css\responsive.css" />
-    <Content Include="Assets\css\style.css" />
-    <Content Include="Assets\fonts\fontawesome-webfont.svg" />
     <Content Include="Assets\img\logo\logo.png" />
-    <Content Include="Assets\img\Slider\01.jpg" />
-    <Content Include="Assets\img\Slider\03.jpg" />
-    <Content Include="Assets\img\Slider\04.jpg" />
-    <Content Include="Assets\img\Slider\05.jpg" />
-    <Content Include="Assets\img\Slider\06-edited.jpg" />
-    <Content Include="Assets\img\Slider\06.jpg" />
-    <Content Include="Assets\img\Slider\1.jpg" />
-    <Content Include="Assets\img\Slider\1.png" />
-    <Content Include="Assets\img\Slider\23.jpg" />
-    <Content Include="Assets\img\tables\1.jpg" />
-    <Content Include="Assets\img\tables\2.jpg" />
-    <Content Include="Assets\img\tables\3.jpeg" />
-    <Content Include="Assets\img\tables\3.jpg" />
-    <Content Include="Assets\img\tables\4.jpg" />
-    <Content Include="Assets\img\tables\5.jpg" />
-    <Content Include="Assets\img\tables\6.jpg" />
-    <Content Include="Assets\img\users\2.jpg" />
-    <Content Include="Assets\img\users\3.jpg" />
     <Content Include="Assets\img\users\me.JPG" />
     <Content Include="Assets\js\base\htmlLoader.js" />
     <Content Include="Assets\js\base\script.js" />
-    <Content Include="Assets\js\jquery.isotope.js" />
-    <Content Include="Assets\js\main.js" />
-    <Content Include="Assets\js\owl.carousel.js" />
-    <Content Include="Assets\js\plugins\bootstrap\bootstrap.min.js" />
-    <Content Include="Assets\js\plugins\calendar\cupertino\images\animated-overlay.gif" />
-    <Content Include="Assets\js\plugins\calendar\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
-    <Content Include="Assets\js\plugins\calendar\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
-    <Content Include="Assets\js\plugins\calendar\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
-    <Content Include="Assets\js\plugins\calendar\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
-    <Content Include="Assets\js\plugins\calendar\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
-    <Content Include="Assets\js\plugins\calendar\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
-    <Content Include="Assets\js\plugins\calendar\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
-    <Content Include="Assets\js\plugins\calendar\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
-    <Content Include="Assets\js\plugins\calendar\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
-    <Content Include="Assets\js\plugins\calendar\cupertino\images\ui-icons_2694e8_256x240.png" />
-    <Content Include="Assets\js\plugins\calendar\cupertino\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Assets\js\plugins\calendar\cupertino\images\ui-icons_3d80b3_256x240.png" />
-    <Content Include="Assets\js\plugins\calendar\cupertino\images\ui-icons_72a7cf_256x240.png" />
-    <Content Include="Assets\js\plugins\calendar\cupertino\images\ui-icons_ffffff_256x240.png" />
-    <Content Include="Assets\js\plugins\calendar\cupertino\jquery-ui.min.css" />
-    <Content Include="Assets\js\plugins\calendar\fullcalendar.min.js" />
-    <Content Include="Assets\js\plugins\calendar\jquery-ui.custom.min.js" />
-    <Content Include="Assets\js\plugins\calendar\jquery.min.js" />
-    <Content Include="Assets\js\plugins\calendar\moment.min.js" />
-    <Content Include="Assets\js\plugins\jquery\Chart.bundle.min.js" />
-    <Content Include="Assets\js\plugins\jquery\jquery-3.1.0.min.js" />
-    <Content Include="Assets\js\plugins\jquery\scroll.js" />
     <Content Include="Assets\nancy-logo.png" />
     <Content Include="Script\Homepage.js" />
     <Content Include="Script\Login.js" />
@@ -175,7 +120,6 @@
     <Content Include="Views\Homepage.html">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Views\login.html" />
     <Content Include="Views\SideNav.html" />
     <Content Include="Views\TopNav.html" />
     <Content Include="Web.config">
@@ -207,15 +151,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="packages.config" />
-    <Content Include="Assets\fonts\fontawesome-webfont.eot" />
-    <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Assets\fonts\fontawesome-webfont.woff" />
-    <Content Include="Assets\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Assets\fonts\FontAwesome.otf" />
-    <Content Include="Assets\fonts\HV.ttf" />
     <Content Include="cards.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\test.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -227,7 +166,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Assets\css\components\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

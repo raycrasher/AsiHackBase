@@ -10,7 +10,7 @@ namespace Alliance.NihonggoFlash.Services
 {
     public class RetrieveDataFromOnline
     {
-        public void RetrieveData()
+        public bool RetrieveData()
         {
             try
             {
@@ -32,10 +32,11 @@ namespace Alliance.NihonggoFlash.Services
                         }
                     }
                 }
+                return true;
             }
             catch(Exception ex)
             {
-                // dunno what to do here yet                
+                return false;
             }
         }
     }
